@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=7">
+		<!-- <meta http-equiv="x-ua-compatible" content="ie=6"> -->
+		<title>百度一下，你就知道 </title>
+		<link rel="stylesheet" href="../css/Baidu.css">
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-weather">
+				<ul>
+					<li><span>广州：</span><img class="header-weather-night" src="../image/a0_night.png"><span>15℃</span></li>
+					<li class="vertical">|</li>
+					<li><span>空气质量:161</span></li>
+					<li><span class="Air_quality">中度污染</span></li>
+				</ul>
+			</div>
+			<div class="header-use">
+				<ul>
+					<li><a href="#">用户名</a></li>
+					<li><a href="#">设为首页</a></li>
+					<li>|</li>
+					<li><i></i><a href="#">消息</a></li>
+					<li><i></i><a href="#">换肤</a></li>
+					<li><i></i><a href="#">宝箱</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="logo">
+			<div class="logo-baidu">
+				<img src="../image/bdlogo.png" width="270" height="129">
+			</div>
+		</div>
+
+		<div class="nav">
+			<div class="nav-column">
+				<ul>
+					<li><a href="#">新闻</a></li>
+					<li class="web">网页</li>
+					<li><a href="#">贴吧</a></li>
+					<li><a href="#">知道</a></li>
+					<li><a href="#">音乐</a></li>
+					<li><a href="#">图片</a></li>
+					<li><a href="#">视频</a></li>
+					<li><a href="#">地图</a></li>
+					<li><a href="#">百科</a></li>
+					<li><a href="#">文库</a></li>
+					<li><a href="#">更多>></a></li>
+				</ul>
+			</div>
+			<div class="nav-input">
+				<div class="nav-input-searchgroup">
+					<input class="nav-input-search" type="search">
+					<input class="nav-input-button" type="button" value="百度一下">
+				</div>
+			</div>
+		</div>
+
+		<div class="body">
+			<div class="body-content">
+				<div class="body-content-aside">
+					<ul id="content-aside">
+						<li self-attr="1" class="s_active">导航</li>
+						<li self-attr="2">新闻</li>
+						<li self-attr="3">音乐</li>
+					</ul>
+					<div class="body-content-aside-img">
+						<span></span>
+					</div>
+				</div>
+				<div class="body-content-content">
+					<div class="body-content-body">
+						<div id="content-div-li-guide" class="li-guide"><!-- 导航 -->
+							<div class="body-content-header">
+								<div class="gudie">
+									<div class="guide-pad"></div>
+									<div id="guide" class="guide-mine">
+										<span id="my-guide" class="guide-mine-select">我的导航</span>
+										<span id="my-recommend">推荐导航</span>
+									</div>
+									<div class="guide-add"><i></i>添加</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+							<div id="my-guide-child" class="myguide"></div><!-- 我的导航 -->
+							<div id="my-recommend-child" class="recommend" style="display:none;"><!-- 推荐导航 -->
+								<div class="recommend-aside">
+									<span>热门网址</span>
+								</div>
+								<div class="recommend-content">
+									<ul>
+										<li><img width="115" height="70" src="http://6.su.bdimg.com/bigicon/24/101.png?10"></li>
+										<li><img width="115" height="70" src="http://7.su.bdimg.com/bigicon/24/102.png?10"></li>
+										<li><img width="115" height="70" src="http://6.su.bdimg.com/bigicon/24/125.png?10"></li>
+										<li><img width="115" height="70" src="http://8.su.bdimg.com/bigicon/24/127.png?10"></li>
+										<li><img width="115" height="70" src="http://4.su.bdimg.com/bigicon/24/123.png?10"></li>
+										<li><img width="115" height="70" src="http://3.su.bdimg.com/bigicon/24/106.png?10"></li>
+										<li><img width="115" height="70" src="http://7.su.bdimg.com/bigicon/24/126.png?10"></li>
+										<li><img width="115" height="70" src="http://5.su.bdimg.com/bigicon/24/108.png?10"></li>
+										<li><img width="115" height="70" src="http://3.su.bdimg.com/bigicon/24/130.png?10"></li>
+										<li><img width="115" height="70" src="http://2.su.bdimg.com/bigicon/24/129.png?10"></li>
+										<li><img width="115" height="70" src="http://2.su.bdimg.com/bigicon/24/121.png?10"></li>
+										<li><img width="115" height="70" src="http://1.su.bdimg.com/bigicon/24/128.png?10"></li>
+										<li><img width="115" height="70" src="http://5.su.bdimg.com/bigicon/24/132.png?10"></li>
+										<li><img width="115" height="70" src="http://3.su.bdimg.com/bigicon/24/122.png?10"></li>
+										<li><img width="115" height="70" src="http://1.su.bdimg.com/bigicon/24/120.png?10"></li>
+										<li><img width="115" height="70" src="http://6.su.bdimg.com/bigicon/24/109.png?10"></li>
+										<li><img width="115" height="70" src="http://5.su.bdimg.com/bigicon/24/12.png?10"></li>
+										<li><img width="115" height="70" src="http://4.su.bdimg.com/bigicon/24/131.png?10"></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div id="content-div-li-new" class="li-new" style="display:none;"><!-- 新闻 -->
+							<div class="li-new-left">
+								<div id="carousel-big" class="li-new-left-header">
+									<div class="carousel-big-content">
+										<img height="260" width="425" src="http://c.hiphotos.baidu.com/super/whfpf%3D425%2C260%2C50/sign=9565427b8982b9013df8907315b09d45/314e251f95cad1c8fd1f957b7c3e6709c83d51c1.jpg">
+										<span></span>
+										<a href="#">奇点大学的秘密</a>
+									</div>
+									<div class="carousel-big-content">
+										<img height="260" width="425" src="http://d.hiphotos.baidu.com/super/whfpf%3D425%2C260%2C50/sign=458ed6eeba014a90816b15fdcf4a0d20/241f95cad1c8a786928e23526409c93d71cf50c1.jpg">
+										<span></span>
+										<a href="#">巧克力兵马俑戴圣诞帽过洋节</a>
+									</div>
+									<div class="carousel-big-content">
+										<img height="260" width="425" src="http://a.hiphotos.baidu.com/super/whfpf%3D425%2C260%2C50/sign=750b977f4a540923aa3c303ef465e53b/359b033b5bb5c9eaed746abfd639b6003bf3b3e3.jpg">
+										<span></span>
+										<a href="#">黑莓在中国：关键不在于敏感与否</a>
+									</div>
+									<div class="carousel-big-content">
+										<img height="260" width="425" src="http://d.hiphotos.baidu.com/super/whfpf%3D425%2C260%2C50/sign=f2998138554e9258a661d5aefabfe56a/c8ea15ce36d3d5394dba669f3987e950342ab0e3.jpg">
+										<span></span>
+										<a href="#">美众议院正式起诉奥巴马政府滥权</a>
+									</div>
+									<div class="carousel-big-content">
+										<img height="260" width="425" src="http://e.hiphotos.baidu.com/super/whfpf%3D425%2C260%2C50/sign=21ee0a229158d109c4b6faf2b765f88d/14ce36d3d539b600c64966ebea50352ac75cb7e3.jpg">
+										<span></span>
+										<a href="#">伊斯兰国正大规模招募训练娃娃兵</a>
+									</div>
+									<div class="carousel-big-content">
+										<img height="260" width="425" src="http://f.hiphotos.baidu.com/super/whfpf%3D425%2C260%2C50/sign=519cc75930fa828bd176cea39b227506/faf2b2119313b07e272213540fd7912396dd8ccb.jpg">
+										<span></span>
+										<a href="#">南宁：棚户区居民“水上漂”生活</a>
+									</div>
+									<div class="carousel-big-content">
+										<img height="260" width="425" src="http://b.hiphotos.baidu.com/super/whfpf%3D425%2C260%2C50/sign=9279cb47d70735fa91a51df9f86c3b81/f11f3a292df5e0fea044e05d5f6034a85edf7209.jpg">
+										<span></span>
+										<a href="#">美国纽约西部暴风雪后又忧洪灾</a>
+									</div>
+								</div>
+								<div class="li-new-left-guide">
+									<ul id="carousel-small">
+										<li myattr="0">
+											<img class="opacity active" height="40" width="68" src="http://b.hiphotos.baidu.com/super/whfpf%3D68%2C40%2C50/sign=244c857f70f082022dc7c27f2dc6cdd5/d1160924ab18972b5d006196e5cd7b899e510ab7.jpg">
+										</li>
+										<li myattr="1">
+											<img class="" height="40" width="68" src="http://d.hiphotos.baidu.com/super/whfpf%3D68%2C40%2C50/sign=29121b7cba12c8fcb4a6a58d9a3ea47d/241f95cad1c8a786928e23526409c93d71cf50c1.jpg">
+										</li>
+										<li myattr="2">
+											<img class="" height="40" width="68" src="http://d.hiphotos.baidu.com/super/whfpf%3D68%2C40%2C50/sign=92cae0b29f82d158bbd70af1e6372fe0/3b292df5e0fe9925fff20f0c37a85edf8cb171eb.jpg">
+										</li>
+										<li myattr="3">
+											<img class="" height="40" width="68" src="http://g.hiphotos.baidu.com/super/whfpf%3D68%2C40%2C50/sign=c10bc48375c6a7efb973fb669bc79969/8c1001e93901213f9e142f8057e736d12f2e9542.jpg">
+										</li>
+										<li myattr="4">
+											<img class="" height="40" width="68" src="http://f.hiphotos.baidu.com/super/whfpf%3D68%2C40%2C50/sign=d9418234cfbf6c81f7627fa8da03870d/e1fe9925bc315c60716b0db38eb1cb13485477eb.jpg">
+										</li>
+										<li myattr="5">
+											<img class="" height="40" width="68" src="http://d.hiphotos.baidu.com/super/whfpf%3D68%2C40%2C50/sign=f8f7d66e59afa40f3c939d9dcd593577/aa18972bd40735fa6dca2fe59d510fb30f2408b7.jpg">
+										</li>
+										<li myattr="6">
+											<img class="" height="40" width="68" src="http://b.hiphotos.baidu.com/super/whfpf%3D68%2C40%2C50/sign=ab398d65b0de9c82a630aacf0abcb632/f11f3a292df5e0fea044e05d5f6034a85edf7209.jpg">
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="li-new-right">
+								<div class="li-new-right-header">
+									<div class="right-header-logo">
+										<i></i>
+										<span>搜索风云榜</span>
+									</div>
+								</div>
+								<div class="li-new-right-body">
+									<div class="right-body-main">
+										<ul>
+											<li><a href="#">百度自行车</a></li>
+											<li><a href="#">秦皇岛7死1伤命案</a></li>
+											<li><a href="#">实拍一龙5次击倒mma</a></li>
+											<li><a href="#">审判金正恩</a></li>
+											<li><a href="#">中国增设超大城市</a></li>
+											<li><a href="#">导演迈克尼科尔斯去世</a></li>
+											<li><a href="#">安徽高速</a></li>
+											<li><a href="#">21世纪传媒</a></li>
+										</ul>
+									</div>
+									<div class="right-body-main">
+										<ul>
+											<li><a href="#">土地流转</a></li>
+											<li><a href="#">食盐专营</a></li>
+											<li><a href="#">内蒙奸杀冤案再审</a></li>
+											<li><a href="#">社会抚养费</a></li>
+											<li><a href="#">女官员半裸自杀</a></li>
+											<li><a href="#">尼加拉瓜运河</a></li>
+											<li><a href="#">人大跳楼</a></li>
+											<li><a href="#">mx4发布会</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="content-div-li-music" class="li-music" style="display:none;"><!-- 音乐 -->
+							<div class="li-music-content">
+								<div class="li-music-main">
+									<div class="music-main-CD">
+										<img class="CD" src="../image/aa.jpg">
+									</div>
+									<div class="music-main-header">
+										<div class="music-main-header-name">
+											<a class="big-name" href="#">爱夏</a>
+											<a class="small-name" href="#">胡夏</a>
+										</div>
+										<div class="music-main-header-plug-in">
+											<div class="progress">
+												<span></span>
+											</div>
+											<div class="time">-3:05</div>
+											<i></i>
+											<span>&nbsp;&nbsp;下载</span>
+										</div>
+										<div class="music-main-header-controls">
+											<div class="pause"></div>
+											<div class="love"></div>
+											<div class="del"></div>
+											<div class="next"></div>
+											<div class="music-logo"></div>
+										</div>
+									</div>
+									<div class="music-main-lyrics">
+										<br>
+										词曲：曲婉婷<br>
+										演唱：曲婉婷<br><br><br>
+										没有一点点防备<br>
+										也没有一丝顾虑<br><br><br>
+										可是你偏又这样<br>
+										在我不知不觉中 悄悄的消失<br>
+										从我的世界里 没有音讯<br>
+										剩下的只是回忆<br>
+									</div>
+									<div class="scrollbar">
+										<span></span>
+									</div>
+								</div>
+								<div class="li-music-list">
+									<span>热门频道</span>
+									<div class="clear"></div>
+									<div class="music-list-main main-first">
+										<ul>
+											<li><a href="#">私人频道</a></li>
+											<li><a href="#">随便听听</a></li>
+											<li><a href="#">经典老歌</a></li>
+											<li><a href="#">热歌</a></li>
+											<li><a href="#">成名曲</a></li>
+											<li><a href="#">流行</a></li>
+											<li><a href="#">KTV金曲</a></li>
+											<li><a href="#">80后</a></li>
+										</ul>
+									</div>
+									<div class="music-list-main main-second">
+										<ul>
+											<li><a href="#">红星频道</a></li>
+											<li><a href="#">欧美</a></li>
+											<li><a href="#">DJ舞曲</a></li>
+											<li><a href="#">网络红歌</a></li>
+											<li><a href="#">火爆新歌</a></li>
+											<li><a href="#">快乐旋律</a></li>
+											<li><a href="#">伤感调频</a></li>
+											<li><a href="#">90后</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="footer-brand">
+				<span>&copy;2014&nbsp;Baidu</span>
+				<a href="#">使用百度前必读</a>
+				<span>京ICP证030173号</span>
+				<img src="../image/copy_rignt_24.png">
+			</div>
+		</div>
+		<!-- <script src="../js/BaiDu.js"></script> -->
+		<script src="../js/Carousel.js"></script>
+	</body>
+</html>

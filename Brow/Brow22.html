@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
+    <title>QQ</title>
+    
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+	<style type="text/css">
+	#div{
+		position:absolute;
+		height:100px;
+		width:550px;
+		border:1px solid black;
+		top:100px;
+		left:300px;
+		display: -webkit-flex;
+    	display: flex;
+	}
+	#div #con1 img{
+		transform: skewX(0deg);
+		-o-transform: skewX(0deg);  
+		-webkit-transform: skewX(0deg);  
+		-moz-transform: skewX(0deg);
+	}
+	#div img{
+		position: absolute;
+		bottom: 0px;
+		transform: skewX(-27deg);
+		-o-transform: skewX(-27deg);  
+		-webkit-transform: skewX(-27deg);  
+		-moz-transform: skewX(-27deg);
+	}
+	#div #con1{
+		border-bottom: 100px solid #FBEEEC;
+		border-right: 50px solid transparent;
+   		float:left;
+		width: 77px;
+		overflow: hidden;
+		height: 0px;
+	}
+	#div #con2,#con3{
+		float: left;
+		width:77px;
+		height: 100px;
+		background:#F9E6DA;
+		position: relative;
+		left: -25px;
+		overflow: hidden;
+		transform: skewX(27deg);
+		-o-transform: skewX(27deg);  
+		-webkit-transform: skewX(27deg);  
+		-moz-transform: skewX(27deg);
+	}
+	#div .cont5{
+		-webkit-flex:1;
+		flex:1;
+	}
+	#div .conn5 img{
+		position: absolute;
+		bottom: 20px;
+		left: 15px;
+		-webkit-transform:scale(2.0) skewX(-30deg);
+	    -moz-transform:scale(2.0) skewX(-30deg);
+	    -transform:scale(2.0) skewX(-30deg);
+	}
+	#div #con1 a{
+		position: absolute;
+		text-decoration: none;
+		color:black;
+	}
+	#div #con2 a{
+		position: absolute;
+		text-decoration: none;
+		color:black;
+	}
+	#div #con3 a{
+		position: absolute;
+		text-decoration: none;
+		color:black;
+	}
+	#div #con1 p{
+		position: absolute;
+		font-size: 10px;
+		left: 115px;
+		width: 95px;
+		top: 10px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	#div #con2 p{
+		transform: skewX(-27deg);
+		-o-transform: skewX(-27deg);  
+		-webkit-transform: skewX(-27deg);  
+		-moz-transform: skewX(-27deg);
+		position: absolute;
+		font-size: 10px;
+		left: 100px;
+		width: 95px;
+		top: 10px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	#div #con3 p{
+		transform: skewX(-27deg);
+		-o-transform: skewX(-27deg);  
+		-webkit-transform: skewX(-27deg);  
+		-moz-transform: skewX(-27deg);
+		position: absolute;
+		font-size: 10px;
+		left: 100px;
+		width: 95px;
+		top: 10px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	#div #con1 a p span{
+		font-size: 15px;
+		font-weight: 700;
+		color: #F07683;
+	}
+	#div #con2 a p span{
+		font-size: 15px;
+		font-weight: 700;
+	}
+	#div #con2 a p .span2{
+		color: #EA921F;
+	}
+	#div #con2 a p .span3{
+		color: #39B20E;
+	}
+	#div #con2 a p .span4{
+		color: #4DC7E3;
+	}
+	#div #con3 a p span{
+		font-size: 15px;
+		font-weight: 700;
+		color: #0078FE;
+	}
+	#content2 {
+		width: 0px;
+		height: 0px;
+		position: relative;
+		left: 791px;
+		top: 93px;
+		border-top: 102px solid #F9E6EB;
+		border-left: 52px solid transparent;
+	}
+	#div .con5{
+		-webkit-flex:2;
+		flex:2;
+	}
+	#div .con5 img{
+		width: 100px;
+		height: 100px;
+	}
+	#con3{
+		background: #DEEBFA;
+	}
+	#content2 a{
+		display: block;
+		width: 100px;
+		height: 50px;
+		position: relative;
+		text-decoration: none;
+		color:black;
+		top:-90px;
+		left:-35px;
+		font-size: 12px;
+	}
+	#div .cont1:hover,#div .cont2:hover,#div .cont3:hover,#div .cont4:hover{
+		-webkit-flex:2;
+		flex:2;
+	}
+	#div #con1.cont1:hover img{
+		position: absolute;
+		bottom: 20px;
+		left: 15px; 
+		-webkit-transform:scale(2.0) skewX(0deg);
+	    -moz-transform:scale(2.0) skewX(0deg);
+	    -transform:scale(2.0) skewX(0deg);
+	}
+	#div .cont2:hover img{
+		position: absolute;
+		bottom: 20px;
+		left: 15px; 
+		-webkit-transform:scale(2.0) skewX(-27deg);
+	    -moz-transform:scale(2.0) skewX(-27deg);
+	    -transform:scale(2.0) skewX(-27deg);
+	}
+	#div .cont3:hover img{
+		position: absolute;
+		bottom: 20px;
+		left: 15px; 
+		-webkit-transform:scale(2.0) skewX(-27deg);
+	    -moz-transform:scale(2.0) skewX(-27deg);
+	    -transform:scale(2.0) skewX(-27deg);
+	}
+	#div .cont4:hover img{
+		position: absolute;
+		bottom: 20px;
+		left: 15px; 
+		-webkit-transform:scale(2.0) skewX(-27deg);
+	    -moz-transform:scale(2.0) skewX(-27deg);
+	    -transform:scale(2.0) skewX(-27deg);
+	}
+	#div .cont5:hover img{
+		position: absolute;
+		bottom: 20px;
+		left: 15px; 
+		-webkit-transform:scale(2.0) skewX(-27deg);
+	    -moz-transform:scale(2.0) skewX(-27deg);
+	    -transform:scale(2.0) skewX(-27deg);
+	}
+	#div #con1:hover p{
+		position: absolute;
+		font-size: 10px;
+		left: 115px;
+		width: 95px;
+		top: 10px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	#div #con2:hover p{
+		transform: skewX(-27deg);
+		-o-transform: skewX(-27deg);  
+		-webkit-transform: skewX(-27deg);  
+		-moz-transform: skewX(-27deg);
+		position: absolute;
+		font-size: 10px;
+		left: 100px;
+		width: 95px;
+		top: 10px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	#div #con3:hover p{
+		transform: skewX(-27deg);
+		-o-transform: skewX(-27deg);  
+		-webkit-transform: skewX(-27deg);  
+		-moz-transform: skewX(-27deg);
+		position: absolute;
+		font-size: 10px;
+		left: 100px;
+		width: 95px;
+		top: 10px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	</style>
+
+  </head>
+  <body>
+	<div id="div">
+		<div id="con1" class="cont1"><img src="img/01.png" height="50" width="50"><a href="##"><p><span>国宝过六一</span><br>查看详情</p></a></div>
+	    <div id="con2" class="cont2"><img src="img/02.png" height="50" width="50"><a href="##"><p><span class="span2">炮炮兵世界杯</span><br>查看详情</p></a></div>
+	    <div id="con2" class="cont3" style="background:#E5F8DA;"><img src="img/03.png" height="50" width="50"><a href="##"><p><span class="span3">Hellow Kitty爱玩耍</span><br>查看详情</p></a></div>
+	    <div id="con2" class="cont4" style="background:#DEF7F9;"><img src="img/04.png" height="50" width="50"><a href="##"><p><span class="span4">加菲猫</span><br>查看详情</p></a></div>
+	    <div id="con3" class="cont5"><img src="img/05.png" height="50" width="50"><a href="##"><p><span>宫廷语录</span><br>查看详情</p></a></div>
+	    
+    </div>
+    <div id="content2">
+	    <a href="##">更多&gt;</a>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>仿淘宝商品展示放大图片效果</title>
+	</head>
+	<style type="text/css">
+	div,.one,.oneinsert,.two{
+		margin: 0px;
+		padding: 0px;
+	}
+	#one{
+		border: 0px solid #ffc;
+		position: relative;
+		left: 200px;
+		top: 20px;
+		height: 310px;
+		width: 310px;
+		float: left;
+	}
+	.oneinsert{
+		width: 155px;
+		height: 155px;
+		position: absolute;
+		background: #fcc;
+		filter:alpha(opacity=50);
+		opacity:0.5;
+		display: none;
+	}
+	.two{
+		width: 310px;
+		height: 310px;
+		position: relative;
+		top: 20px;
+		left: 210px;
+		overflow: hidden;
+		display: none;
+	}
+	.two img{
+		-webkit-transform:translate(0px,0px);
+	}
+	#content{
+		position: absolute;
+		height: 310px;
+		width: 310px;
+		margin: 0px;
+		top: 0px;
+		background:red;
+		filter:alpha(opacity=0);
+		opacity:0;
+		z-index: 1000;
+		cursor: move;
+		-webkit-transform:translateZ(0px);
+	}
+	#one:hover{
+	}
+	</style>
+	<body>
+		<div id="one">
+			<img src="image/04mid.jpg">
+			<div class="oneinsert"></div>
+			<div id="content"></div>
+		</div>
+		<div id="out" class="two">
+			<img src="image/04.jpg" width="620px" height="620px">
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				var content=document.getElementById('content');
+				var out=document.getElementById('out');
+				var one=document.getElementById('one');
+				var oneinsert=document.getElementsByClassName('oneinsert')[0];
+				var img=out.getElementsByTagName('img')[0];
+				content.onmouseover=function(){
+					oneinsert.style.display='block';
+					out.style.display='block';
+				}
+				content.onmouseout=function(){
+					oneinsert.style.display='none';
+					out.style.display='none';
+				}
+				content.onmousemove=function(event){
+					var X=event.clientX-one.offsetLeft-77;
+					var Y=event.clientY-one.offsetTop-77;
+					if (X>=0||X<=155) {
+						oneinsert.style.left=X+'px';
+						if (2*X>310) {
+							setCss3(img,{transform:"translate(-310px,-"+(2*Y)+"px)"});
+						}else{
+							setCss3(img,{transform:"translate(-"+(2*X)+"px,-"+(2*Y)+"px)"});
+						}
+					}
+					if (X<0) {
+						oneinsert.style.left='0px';
+						if(2*Y>310){
+							setCss3(img,{transform:"translate(0px,-310px)"});
+						}else{
+							setCss3(img,{transform:"translate(0px,-"+(2*Y)+"px)"});
+						}
+					};
+					if (X>155) {
+						oneinsert.style.left='155px';
+					};
+					if (Y>=0||Y<=155) {
+						oneinsert.style.top=Y+'px';
+						if(2*Y>310){
+							setCss3(img,{transform:"translate(-"+(2*X)+"px,-310px)"});	
+						}else{
+							setCss3(img,{transform:"translate(-"+(2*X)+"px,-"+(2*Y)+"px)"});
+						}
+					}
+					if (Y<0) {
+						oneinsert.style.top='0px';
+						setCss3(img,{transform:"translate(-"+(2*X)+"px,0px)"});
+					};
+
+					if (Y>155) {
+						oneinsert.style.top='155px';
+					};
+					//console.log('X='+X+',Y='+Y);
+				}
+			}
+			function setCss3 (obj,attrObj) {
+			    for (var i in attrObj) {
+				    var newi=i;
+					if(newi.indexOf("-")>0){
+						var num=newi.indexOf("-");
+					  	newi=newi.replace(newi.substr(num,2),newi.substr(num+1,1).toUpperCase());
+					}
+					obj.style[newi]=attrObj[i];
+					newi=newi.replace(newi.charAt(0),newi.charAt(0).toUpperCase());
+					obj.style["webkit"+newi]=attrObj[i];
+					obj.style["moz"+newi]=attrObj[i];
+					obj.style["o"+newi]=attrObj[i];
+					obj.style["ms"+newi]=attrObj[i];
+				}
+			}
+		</script>
+	</body>
+</html>

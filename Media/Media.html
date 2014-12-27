@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>音乐</title>
+	</head>
+	<style type="text/css">
+	body,div{
+		margin: 0px;
+		padding: 0px;
+	}
+	.plays ul li{
+		list-style: none;
+	}
+	.piano{
+		position: relative;
+		top: 20px;
+		left: 500px;
+		width: 330px;
+	}
+	.piano li{
+		display: block;
+		height: 200px;
+		width: 30px;
+		border:2px solid #ccc;
+		float: left;
+		margin: 1px;
+	}
+	.top{
+		position: absolute;
+		top: 18px;
+		left: 517px;
+	}
+	.top li{
+		display: block;
+		height: 130px;
+		width: 30px;
+		float: left;
+		background-color: black;
+		margin: 3px;
+	}
+	.top .white{
+		background-color: transparent;
+	}
+	.music{
+		position: relative; 
+		margin-left: 400px;
+		top: 30px;
+		line-height: 40px;
+	}
+	</style>
+	<body>
+		<div class="plays">
+			<ul class="piano">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="top">				
+				<li></li>
+				<li></li>
+				<li class="white"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li class="white"></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul>
+				<li><audio src="media/1.ogg" controls="controls" hidden="true"></audio></li>
+				<li><audio src="media/2.ogg" controls="controls" hidden="true"></audio></li>
+				<li><audio src="media/3.ogg" controls="controls" hidden="true"></audio></li>
+				<li><audio src="media/4.ogg" controls="controls" hidden="true"></audio></li>
+				<li><audio src="media/5.ogg" controls="controls" hidden="true"></audio></li>
+				<li><audio src="media/6.ogg" controls="controls" hidden="true"></audio></li>
+				<li><audio src="media/7.ogg" controls="controls" hidden="true"></audio></li>
+				<li><audio src="media/8.ogg" controls="controls" hidden="true"></audio></li>
+				<li><audio src="media/9.ogg" controls="controls" hidden="true"></audio></li>
+			</ul>
+		</div>
+		<div style="clear:both"></div>
+		<div class="music">
+			<dl>
+				<dd>小星星乐谱1155665&nbsp;4433221&nbsp;5544332&nbsp;5544332&nbsp;1155665&nbsp;4433221</dd>
+				<dd>茉莉花乐谱33568865&nbsp;565&nbsp;33568865&nbsp;565&nbsp;555356&nbsp;665&nbsp;3235&nbsp;321&nbsp;121&nbsp;3212&nbsp;356865&nbsp;523532121</dd>
+				<dd>光阴的故事乐谱55565332313886865&nbsp;88686556513556532&nbsp;55565332313886865&nbsp;8868155653588867&nbsp;89
+</dd>
+			</dl>
+		</div>
+		<script type="text/javascript">
+		window.onload=function(){
+			var plays=document.getElementsByClassName('plays');
+			var pianoli=document.getElementsByTagName('li');
+			var audio=document.getElementsByTagName('audio');
+			onkeydown=function(event){
+			var e = event || window.event || arguments.callee.caller.arguments[0];
+			if (e.keyCode==97||e.keyCode==65) {
+				pl(0);
+			};
+			if (e.keyCode==98||e.keyCode==83) {
+				pl(1);
+			};
+			if (e.keyCode==99||e.keyCode==68) {
+				pl(2);
+			};
+			if (e.keyCode==100||e.keyCode==70) {
+				pl(3);	
+			};
+			if (e.keyCode==101||e.keyCode==71) {
+				pl(4);
+			};
+			if (e.keyCode==102||e.keyCode==72) {
+				pl(5);
+			};
+			if (e.keyCode==103||e.keyCode==74) {
+				pl(6);
+			};
+			if (e.keyCode==104||e.keyCode==75) {
+				pl(7);
+			};
+			if (e.keyCode==105||e.keyCode==76) {
+				pl(8);
+			};
+		}
+		function pl(i){
+			audio[i].play();
+				pianoli[i].style.background='#00F7FE';
+				var times=setTimeout(function(){
+					pianoli[i].style.background='white';
+					audio[i].pause();
+					audio[i].currentTime = 0.0;
+				},200);
+		}
+	}
+		</script>
+	</body>
+</html>

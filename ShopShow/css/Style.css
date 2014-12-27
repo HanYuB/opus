@@ -1,0 +1,36 @@
+*{margin: 0; padding: 0;}
+.img{
+	width: 100%;
+	margin-left: 500px;
+	margin-top: 50px;
+}
+.big-img{
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+}
+.big-img ul{
+	list-style: none;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+}
+.big-img ul li{
+	position: absolute;
+}
+.small-img{
+	width: 220px;
+	height: 55px;
+	overflow: hidden;
+}
+.small-img ul{
+	list-style: none;
+	width: 220px;
+	height: 55px;
+	overflow: hidden;
+}
+.small-img ul li{
+	float: left;
+	border: 1px solid gray;
+	margin-right: 2px;
+}

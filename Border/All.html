@@ -1,0 +1,622 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Css绘制各种图形</title>
+	</head>
+	<style type="text/css">
+	body{
+		margin: 50px;
+	}
+	#arrow-muticolor{
+		border-color: red green blue orange;
+		border-style: solid;
+		border-width: 40px;
+		width: 0px;
+		height: 0px;
+	}
+	#arrow-acute{
+		border-color: red green blue orange;
+		border-style: solid;
+		border-width: 35px 20px 25px 50px;
+		width: 0px;
+		height: 0px;
+	}
+	#arrow-border{
+		border-style: double;
+		border-color: red green blue orange;
+		border-width: 45px 40px 75px 50px;
+		width: 0px;
+		height: 0px;
+	}
+	#square{
+		width: 100px;
+		height: 100px;
+		background: red;
+	}
+	#rectangle{
+		width: 100px;
+		height: 50px;
+		background: red;
+	}
+	#circle{
+		width: 100px;
+		height: 100px;
+		background: red;
+		-moz-border-radius:50px;
+		-webkit-border-radius:50px;
+		border-radius: 50px;
+	}
+	#semicircle{
+		width: 100px;
+		height: 50px;
+		background: red;
+		-moz-border-radius:100px 100px 0 0;
+		-webkit-border-radius:100px 100px 0 0;
+		border-radius: 100px 100px 0 0;
+	}
+	#else{
+		width: 100px;
+		height: 50px;
+		background: red;
+		-moz-border-radius:50px;
+		-webkit-border-radius:50px;
+		border-radius:50px;
+	}
+	#fan-shaped{
+		background: none repeat scroll 0 0 red;
+		-moz-border-radius:50px 0 0 0;
+		-webkit-border-radius:50px 0 0 0;
+		border-radius: 50px 0 0 0;
+		width: 50px;
+		height: 50px;
+	}
+	#oval{
+		width: 200px;
+		height: 100px;
+		background: red;
+		-moz-border-radius:100px/50px;
+		-webkit-border-radius:100px/50px;
+		border-radius:100px/50px;
+	}
+	#up-triangle{
+		width: 0px;
+		height: 0px;
+		border:50px solid red;
+		border-color: transparent transparent red transparent;
+
+	}
+	#down-triangle{
+		width: 0;
+		height: 0;
+		border:50px solid red;
+		border-color: red transparent transparent transparent;
+	}
+	#left-triangle{
+		width: 0;
+		height: 0;
+		border:50px solid red;
+		border-color: transparent red transparent transparent;
+	}
+	#right-triangle{
+		width: 0;
+		height: 0;
+		border:50px solid red;
+		border-color: transparent transparent transparent red;
+	}
+	#topleft-triangle{
+		width: 0;
+		height: 0;
+		border: 100px solid red;
+		border-color: red transparent transparent red;
+	}
+	#topright-triangle{
+		width: 0;
+		height: 0;
+		border: 100px solid red;
+		border-color: red red transparent transparent;
+	}
+	#parallelogram{
+		width: 150px;
+		height: 100px;
+		-webkit-transform:skew(20deg);
+		-moz-transform:skew(20deg);
+		-o-transform:skew(20deg);
+		transform:skew(20deg);
+		background: red;
+	}
+	#six-star{
+		width: 0;
+		height: 0;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-bottom: 100px solid red;
+		position: relative;
+	}
+	#six-star:after{
+		width: 0;
+		height: 0;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-top: 100px solid red;
+		position: absolute;
+		content: "";
+		top: 30px;
+		left: -50px;
+	}
+	#five-star{
+		margin: :50px 0px;
+		position: relative;
+		display: block;
+		color: red;
+		width: 0px;
+		height: 0px;
+		border-right: 100px solid transparent;
+		border-bottom: 70px solid red;
+		border-left: 100px solid transparent;
+		-moz-transform:rotate(35deg);
+		-wibkit-transform:rotate(35deg);
+		-ms-transform:rotate(35deg);
+		-o-transform:rotate(35deg);
+		transform:rotate(35deg);
+	}
+	#star-five {
+	   margin: 50px 0;
+	   position: relative;
+	   display: block;
+	   color: red;
+	   width: 0px;
+	   height: 0px;
+	   border-right:  100px solid transparent;
+	   border-bottom: 70px  solid red;
+	   border-left:   100px solid transparent;
+	   -moz-transform:    rotate(35deg);
+	   -webkit-transform: rotate(35deg);
+	   -ms-transform:     rotate(35deg);
+	   -o-transform:      rotate(35deg);
+	}
+	#five-star:before{
+		border-bottom: 80px solid red;
+		border-left: 30px solid transparent;
+		border-right: 30px solid transparent;
+		position: absolute;
+		height: 0px;
+		width: 0px;
+		top: -45px;
+		left: -65px;
+		display: block;
+		content: "";
+		-moz-transform:rotate(-35deg);
+		-wibkit-transform:rotate(-35deg);
+		-ms-transform:rotate(-35deg);
+		-o-transform:rotate(-35deg);
+		transform:rotate(-35deg);
+	}
+	#star-five:before {
+	   border-bottom: 80px solid red;
+	   border-left: 30px solid transparent;
+	   border-right: 30px solid transparent;
+	   position: absolute;
+	   height: 0;
+	   width: 0;
+	   top: -45px;
+	   left: -65px;
+	   display: block;
+	   content: '';
+	   -webkit-transform: rotate(-35deg);
+	   -moz-transform:    rotate(-35deg);
+	   -ms-transform:     rotate(-35deg);
+	   -o-transform:      rotate(-35deg);
+	}
+	#five-star:after{
+		position: absolute;
+		display: block;
+		color: red;
+		top: 3px;
+		left: -105px;
+		width: 0px;
+		height: 0px;
+		border-right: 100px solid transparent;
+		border-bottom: 70px solid red;
+		border-left: 100px solid transparent;
+		-moz-transform:rotate(-70deg);
+		-wibkit-transform:rotate(-70deg);
+		-ms-transform:rotate(-70deg);
+		-o-transform:rotate(-70deg);
+		transform:rotate(-70deg);
+		content: "";
+	}
+	
+	#star-five:after {
+	   position: absolute;
+	   display: block;
+	   color: red;
+	   top: 3px;
+	   left: -105px;
+	   width: 0px;
+	   height: 0px;
+	   border-right: 100px solid transparent;
+	   border-bottom: 70px solid red;
+	   border-left: 100px solid transparent;
+	   -webkit-transform: rotate(-70deg);
+	   -moz-transform:    rotate(-70deg);
+	   -ms-transform:     rotate(-70deg);
+	   -o-transform:      rotate(-70deg);
+	   content: '';
+	}
+	#heart{
+		width: 160px;
+		height: 200px;
+		position: relative;
+	}
+	#heart:before{
+		content: "";
+		border:0px solid transparent;
+		-moz-border-radius:100px;
+		-wibkit-border-radius:100px;
+		border-radius: 100px 100px 0px 0px;
+		width: 80px;
+		height: 120px;
+		background: #669;
+		-moz-transform:rotate(-45deg);
+		-ms-transform:rotate(-45deg);
+		-o-transform:rotate(-45deg);
+		-webkit-transform:rotate(-45deg);
+		position: absolute;
+		left: 20px;
+	}
+	#heart:after{
+		content: "";
+		border:0px solid transparent;
+		-moz-border-radius:100px;
+		-webkit-border-radius:100px;
+		border-radius: 100px 100px 0px 0px;
+		width: 80px;
+		height: 120px;
+		background: #669;
+		-moz-transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+		-o-transform:rotate(45deg);
+		-webkit-transform:rotate(45deg);
+		position: absolute;
+		left: 48px;
+		top: 0px;
+	}
+	#pac-man{
+		width: 0px;
+		height: 0px;
+		border:60px solid red;
+		border-color: red transparent red red;
+		-moz-border-radius:60px;
+		-webkit-border-radius:60px;
+		border-radius: 60px;
+	}
+	#talkbubble{
+		width: 120px;
+		height: 80px;
+		background: red;
+		position: relative;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		border-radius: 10px;
+		left: 40px;
+	}
+	#talkbubble:before{
+		content: "";
+		position: absolute;
+		right: 100%;
+		top: 26px;
+		width: 0px;
+		height: 0px;
+		border-top: 13px solid transparent;
+		border-right: 26px solid red;
+		border-bottom: 13px solid transparent;
+	}
+	#pointburst{
+		background: red;
+		width: 80px;
+		height: 80px;
+		position: relative;
+		text-align: center;
+	}
+	#pointburst:before{
+		content: "";
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 80px;
+		width: 80px;
+		background: red;
+		-webkit-transform:rotate(30deg);
+		-moz-transform:rotate(30deg);
+		-ms-transform:rotate(30deg);
+		-o-transform:rotate(30deg);
+		transform:rotate(30deg);
+	}
+	#pointburst:after{
+		content: "";
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 80px;
+		width: 80px;
+		background: red;
+		-webkit-transform:rotate(60deg);
+		-moz-transform:rotate(60deg);
+		-ms-transform:rotate(60deg);
+		-o-transform:rotate(60deg);
+		transform:rotate(60deg);
+	}
+	
+	#yin-yang {
+		width: 96px;
+		height: 48px;
+		background: #eee;
+		border-color: red;
+		border-style: solid;
+		border-width: 2px 2px 50px 2px;
+		border-radius: 100%;
+		position: relative;
+	}
+	#yinyang{
+		width: 96px;
+		height: 48px;
+		background: #eee;
+		border-color: red;
+		border-style:solid;
+		border-width: 2px 2px 50px 2px;
+		border-radius: 100%;
+		position: relative;
+	}
+	#yin-yang:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		background: #eee;
+		border: 18px solid red;
+		border-radius: 100%;
+		width: 12px;
+		height: 12px;
+	}
+	#yinyang:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0px;
+		background: #eee;
+		border:18px solid red;
+		border-radius: 100%;
+		width: 12px;
+		height: 12px;
+	}
+	#yin-yang:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background: red;
+		border: 18px solid #eee;
+		border-radius:100%;
+		width: 12px;
+		height: 12px;
+	}
+	#yinyang:after {
+		content: "";
+		position: absolute;
+		top:50%;
+		left: 50%;
+		background: red;
+		border:18px solid #eee;
+		border-radius: 100%;
+		width: 12px;
+		height: 12px;
+	}
+	#egg {
+	   display:block;
+	   width: 126px;
+	   height: 180px;
+	   background-color: red;
+	   -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+	   border-radius:         50%  50%  50%  50%  / 60%   60%   40%  40%;
+	}
+	#cone {
+	  width: 0;
+	  height: 0;
+	  border-left: 70px solid transparent;
+	  border-right: 70px solid transparent;
+	  border-top: 100px solid red;
+	  -moz-border-radius: 50%;
+	  -webkit-border-radius: 50%;
+	  border-radius: 50%;
+	}
+	#badge-ribbon {
+	 position: relative;
+	 background: red;
+	 height: 100px;
+	 width: 100px;
+	 -moz-border-radius:    50px;
+	 -webkit-border-radius: 50px;
+	 border-radius:         50px;
+	}
+
+	#badge-ribbon:before,
+	#badge-ribbon:after {
+	  content: '';
+	  position: absolute;
+	  border-bottom: 70px solid red;
+	  border-left: 40px solid transparent;
+	  border-right: 40px solid transparent;
+	  top: 70px;
+	  left: -10px;
+	  -webkit-transform: rotate(-140deg);
+	  -moz-transform:    rotate(-140deg);
+	  -ms-transform:     rotate(-140deg);
+	  -o-transform:      rotate(-140deg);
+	}
+
+	#badge-ribbon:after {
+	  left: auto;
+	  right: -10px;
+	  -webkit-transform: rotate(140deg);
+	  -moz-transform:    rotate(140deg);
+	  -ms-transform:     rotate(140deg);
+	  -o-transform:      rotate(140deg);
+	}
+	#tv {
+	  position: relative;
+	  width: 200px;
+	  height: 150px;
+	  margin: 20px 0;
+	  background: red;
+	  border-radius: 50% / 10%;
+	  color: white;
+	  text-align: center;
+	  text-indent: .1em;
+	}
+	#tv:before {
+	  content: '';
+	  position: absolute;
+	  top: 10%;
+	  bottom: 10%;
+	  right: -5%;
+	  left: -5%;
+	  background: inherit;
+	  border-radius: 5% / 50%;
+	}
+	#infinity {
+    position: relative;
+    width: 212px;
+    height: 100px;
+	}
+	#infinity:before,
+	#infinity:after {
+	    content: "";
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 60px;
+	    height: 60px;
+	    border: 20px solid red;
+	    -moz-border-radius: 50px 50px 0 50px;
+	         border-radius: 50px 50px 0 50px;
+	    -webkit-transform: rotate(-45deg);
+	       -moz-transform: rotate(-45deg);
+	        -ms-transform: rotate(-45deg);
+	         -o-transform: rotate(-45deg);
+	            transform: rotate(-45deg);
+	}
+
+	#infinity:after {
+	    left: auto;
+	    right: 0;
+	    -moz-border-radius: 50px 50px 50px 0;
+	         border-radius: 50px 50px 50px 0;
+	    -webkit-transform: rotate(45deg);
+	       -moz-transform: rotate(45deg);
+	        -ms-transform: rotate(45deg);
+	         -o-transform: rotate(45deg);
+	            transform: rotate(45deg);
+	}
+
+	#diamond-shield {
+		width: 0;
+		height: 0;
+		border: 50px solid transparent;
+		border-bottom: 20px solid red;
+		position: relative;
+		top: -50px;
+	}
+	#diamond-shield:after {
+		content: '';
+		position: absolute;
+		left: -50px; top: 20px;
+		width: 0;
+		height: 0;
+		border: 50px solid transparent;
+		border-top: 70px solid red;
+	}
+	#cut-diamond {
+    border-style: solid;
+    border-color: transparent transparent red transparent;
+    border-width: 0 25px 25px 25px;
+    height: 0;
+    width: 50px;
+    position: relative;
+    margin: 20px 0 50px 0;
+	}
+	#cut-diamond:after {
+	    content: "";
+	    position: absolute;
+	    top: 25px;
+	    left: -25px;
+	    width: 0;
+	    height: 0;
+	    border-style: solid;
+	    border-color: red transparent transparent transparent;
+	    border-width: 70px 50px 0 50px;
+	}
+	#curvedarrow {
+	  position: relative;
+	  width: 0;
+	  height: 0;
+	  border-top: 9px solid transparent;
+	  border-right: 9px solid red;
+	  -webkit-transform: rotate(10deg);
+	  -moz-transform: rotate(10deg);
+	  -ms-transform: rotate(10deg);
+	  -o-transform: rotate(10deg);
+	}
+	#curvedarrow:after {
+	  content: "";
+	  position: absolute;
+	  border: 0 solid transparent;
+	  border-top: 3px solid red;
+	  border-radius: 20px 0 0 0;
+	  top: -12px;
+	  left: -9px;
+	  width: 12px;
+	  height: 12px;
+	  -webkit-transform: rotate(45deg);
+	  -moz-transform: rotate(45deg);
+	  -ms-transform: rotate(45deg);
+	  -o-transform: rotate(45deg);
+	}
+	</style>
+	<body>
+		<div id="arrow-muticolor"></div><br>
+		<div id="arrow-acute"></div><br>
+		<div id="arrow-border"></div><br>
+		<div id="square"></div><br>
+		<div id="rectangle"></div><br>
+		<div id="circle"></div><br>
+		<div id="semicircle"></div><br>
+		<div id="else"></div><br>
+		<div id="fan-shaped"></div><br>
+		<div id="oval"></div><br>
+		<div id="up-triangle"></div><br><!-- border:50px solid red;	border-color: transparent transparent transparent red; 不能调转，That is why? 
+		border-bottom: orange;  what is the mean?
+		-->
+		<div id="down-triangle"></div><br>
+		<div id="left-triangle"></div><br>
+		<div id="right-triangle"></div><br>
+		<div id="topleft-triangle"></div><br>
+		<div id="topright-triangle"></div><br>
+		<div id="parallelogram"></div><br>
+		<div id="six-star"></div><br>
+		<div id="star-five"></div><br><!-- 比较id=star-five与id=five-star的css的代码区别-->
+		<div id="heart"></div><br>
+		<div id="pac-man"></div><br>
+		<div id="talkbubble"></div><br>
+		<div id="pointburst"></div><br>
+		<div id="yin-yang"></div><br><!-- 比较id=yinyang与id=yin-yang的css的代码区别-->
+		<div id="egg"></div><br>
+		<div id="cone"></div><br>
+		<div id="badge-ribbon"></div><br>
+		<div id="tv"></div><br>
+		<div id="infinity"></div><br>
+		<div id="diamond-shield"></div><br>
+		<div id="cut-diamond"></div><br>
+		<div id="curvedarrow"></div><br>
+	</body>
+</html>
